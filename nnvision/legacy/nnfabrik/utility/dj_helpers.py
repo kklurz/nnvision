@@ -9,7 +9,11 @@ import numpy as np
 import inspect
 from datetime import date, datetime
 from datajoint.utils import to_camel_case
-from collections import OrderedDict, Iterable, Mapping
+try:
+    from collections import Iterable, Mapping
+except:
+    from collections.abc import Iterable, Mapping
+from collections import OrderedDict
 
 # try/except is necessary to support all versions of dj
 try:

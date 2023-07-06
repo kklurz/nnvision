@@ -1,4 +1,8 @@
-from collections import OrderedDict, Iterable
+try:
+    from collections import Iterable
+except:
+    from collections.abc import Iterable
+from collections import OrderedDict
 import numpy as np
 import torch
 import warnings

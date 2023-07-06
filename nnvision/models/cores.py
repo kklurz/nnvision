@@ -1,6 +1,9 @@
 import os
-
-from collections import OrderedDict, Iterable
+try:
+    from collections import Iterable
+except:
+    from collections.abc import Iterable
+from collections import OrderedDict
 import warnings
 import torch
 from torch import nn as nn

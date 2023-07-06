@@ -3,7 +3,10 @@ import torch
 import torch.nn.functional as F
 from scipy import signal
 import random
-from collections import Iterable
+try:
+    from collections import Iterable
+except:
+    from collections.abc import Iterable
 
 from mei.legacy.utils import varargin
 

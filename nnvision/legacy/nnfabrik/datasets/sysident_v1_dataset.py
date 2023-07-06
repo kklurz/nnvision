@@ -4,7 +4,11 @@ import numpy as np
 import pickle
 
 # from retina.retina import warp_image
-from collections import namedtuple, Iterable
+try:
+    from collections import Iterable
+except:
+    from collections.abc import Iterable
+from collections import namedtuple
 import os
 from neuralpredictors.data.samplers import RepeatsBatchSampler
 
